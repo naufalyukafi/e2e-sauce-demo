@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Verifiy users can product buy', () => {
+describe('Verifiy users can product buy - 1941720040 / Naufal Yukafi Ridlo', () => {
 
     beforeEach(() => {
         cy.visit('/')
