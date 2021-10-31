@@ -21,5 +21,17 @@ describe('Description Product  - 1941720165 / Mochammad Dimasqi Aliffudin Faiz',
         cy.get('.title').should('have.text','Products')
     })
 
+    it('see product with filter Z to A', () => {
+        cy.get('select').select('za');
+        cy.get('.active_option').should('have.text','Name (Z to A)')  
+        cy.get('.inventory_item_name').eq(0).should("have.text","Test.allTheThings() T-Shirt (Red)");
+        cy.get('.inventory_item_name').eq(1).should("have.text","Sauce Labs Onesie");
+        cy.get('.inventory_item_name').eq(2).should("have.text","Sauce Labs Fleece Jacket");
+        cy.get('.inventory_item_name').eq(3).should("have.text","Sauce Labs Bolt T-Shirt");
+        cy.get('.inventory_item_name').eq(4).should("have.text","Sauce Labs Bike Light");
+        cy.get('.inventory_item_name').eq(5).should("have.text","Sauce Labs Backpack");
+     
+    })
+
     
 })
