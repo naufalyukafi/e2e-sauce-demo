@@ -42,5 +42,14 @@ describe('Description Product  - 1941720165 / Mochammad Dimasqi Aliffudin Faiz',
         cy.get('.inventory_item_price').eq(5).should("have.text","$49.99");
     })
 
+    it('see product with filter high to low', () => {
+        cy.get('select').select('hilo');
+        cy.get('.inventory_item_price').eq(0).should("have.text","$49.99");
+        cy.get('.inventory_item_price').eq(1).should("have.text","$29.99");
+        cy.get('.inventory_item_price').eq(2).should("have.text","$15.99");
+        cy.get('.inventory_item_price').eq(3).should("have.text","$15.99");
+        cy.get('.inventory_item_price').eq(4).should("have.text","$9.99");
+        cy.get('.inventory_item_price').eq(5).should("have.text","$7.99");
+    })
     
 })
