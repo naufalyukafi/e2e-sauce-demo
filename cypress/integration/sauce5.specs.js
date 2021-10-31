@@ -30,7 +30,16 @@ describe('Description Product  - 1941720165 / Mochammad Dimasqi Aliffudin Faiz',
         cy.get('.inventory_item_name').eq(3).should("have.text","Sauce Labs Bolt T-Shirt");
         cy.get('.inventory_item_name').eq(4).should("have.text","Sauce Labs Bike Light");
         cy.get('.inventory_item_name').eq(5).should("have.text","Sauce Labs Backpack");
-     
+    })
+
+    it('see product with filter low to high', () => {
+        cy.get('select').select('lohi');
+        cy.get('.inventory_item_price').eq(0).should("have.text","$7.99");
+        cy.get('.inventory_item_price').eq(1).should("have.text","$9.99");
+        cy.get('.inventory_item_price').eq(2).should("have.text","$15.99");
+        cy.get('.inventory_item_price').eq(3).should("have.text","$15.99");
+        cy.get('.inventory_item_price').eq(4).should("have.text","$29.99");
+        cy.get('.inventory_item_price').eq(5).should("have.text","$49.99");
     })
 
     
