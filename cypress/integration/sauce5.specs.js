@@ -51,5 +51,10 @@ describe('Description Product  - 1941720165 / Mochammad Dimasqi Aliffudin Faiz',
         cy.get('.inventory_item_price').eq(4).should("have.text","$9.99");
         cy.get('.inventory_item_price').eq(5).should("have.text","$7.99");
     })
+
+    it('see product description from title products', () => {
+        cy.get('#item_4_title_link').click();
+        cy.contains('Sauce Labs Backpack').should('be.visible') 
+    })
     
 })
